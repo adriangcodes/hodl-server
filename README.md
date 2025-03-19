@@ -1,2 +1,2 @@
 # hodl-server
-DEV1002 - Databases &amp; Servers - Assessment 3
+DEV1002 - Databases and Servers - Assessment 3
