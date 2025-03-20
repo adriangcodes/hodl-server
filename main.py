@@ -13,10 +13,10 @@ def create_app():
     
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_URI')
     
-    # If a validation error happens anywhere in the application, this will be returned
+    # Global validation error handling
     @app.errorhandler(ValidationError)
     def validation_error(err):
-        return {"Error": str(err)}, 400
+        return {"Error": "Invalid input."}, 400
     
     db.init_app(app)
     ma.init_app(app)
