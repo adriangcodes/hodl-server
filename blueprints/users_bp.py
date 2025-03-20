@@ -73,7 +73,7 @@ def update_user(user_id):
         if user:
             # Get incoming request body (JSON)
             data = user_without_id.load(request.json)
-            # Update the attributes of the user with the incoming data - OR option means that the below code covers both PUT and PATCH methods
+            # Update the attributes of the user with the incoming data - OR option covers both PUT and PATCH methods
             user.username = data.get('username') or user.username
             user.email = data.get('email') or user.email
             user.country = data.get('country') or user.country
@@ -84,6 +84,7 @@ def update_user(user_id):
             return one_user.dump(user), 200
         else:
             return {"Error": f"User with id {user_id} not found."}, 404
+    
     except Exception as err:
         return {"Error": str(err)}, 400
 
