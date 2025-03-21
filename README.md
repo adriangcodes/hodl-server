@@ -20,18 +20,48 @@ GitHub repo for past assessments:
 - hodl-app: https://github.com/adriangcodes/hodl-app
 - hodl-data: https://github.com/adriangcodes/hodl-data
 
+# Requirements
+
+Please refer to requirements.txt for installed packages require to run this app.
+
 # User Guide
 
 Please refer to docs/user_guide.md
 
 # ERD
 
-The ERD for this project can be found in docs/erd.pdf
+Please refer to docs/erd.pdf
 
 # Feedback
 
-Please reference docs/feedback_log.md for feedback tracking.
+Please refer to docs/feedback_log.md for feedback tracking.
 Raw peer feedback for this project can be found in docs/feedback
+
+# Third-Party Packages and Licenses
+
+All third-party packages used are open source, and their use in this app can be considered ethical. No modifications have been made to their original code.
+
+	1.	blinker==1.9.0 — MIT License https://github.com/jek/blinker/blob/main/LICENSE.txt
+	2.	certifi==2025.1.31 — MPL-2.0 https://github.com/certifi/python-certifi/blob/main/LICENSE
+	3.	charset-normalizer==3.4.1 — MIT License https://github.com/rs/charset_normalizer/blob/main/LICENSE
+	4.	click==8.1.8 — BSD-3-Clause https://github.com/pallets/click/blob/main/LICENSE.rst
+	5.	Flask==3.1.0 — BSD-3-Clause https://github.com/pallets/flask/blob/main/LICENSE.rst
+	6.	flask-marshmallow==1.3.0 — MIT License https://github.com/marshmallow-code/flask-marshmallow/blob/dev/LICENSE
+	7.	Flask-SQLAlchemy==3.1.1 — BSD-3-Clause https://github.com/pallets-eco/flask-sqlalchemy/blob/main/LICENSE.rst
+	8.	idna==3.10 — BSD-like https://github.com/kjd/idna/blob/main/LICENSE.rst
+	9.	itsdangerous==2.2.0 — BSD-3-Clause https://github.com/pallets/itsdangerous/blob/main/LICENSE.rst
+	10.	Jinja2==3.1.6 — BSD-3-Clause https://github.com/pallets/jinja/blob/main/LICENSE.rst
+	11.	MarkupSafe==3.0.2 — BSD-3-Clause https://github.com/pallets/markupsafe/blob/main/LICENSE.rst
+	12.	marshmallow==3.26.1 — MIT License https://github.com/marshmallow-code/marshmallow/blob/dev/LICENSE
+	13.	marshmallow-sqlalchemy==1.4.1 — MIT License https://github.com/marshmallow-code/marshmallow-sqlalchemy/blob/dev/LICENSE
+	14.	packaging==24.2 — Apache-2.0 or BSD-2-Clause https://github.com/pypa/packaging/blob/main/LICENSE
+	15.	psycopg2-binary==2.9.10 — LGPL with exceptions https://github.com/psycopg/psycopg2/blob/master/LICENSE.txt
+	16.	python-dotenv==1.0.1 — BSD-3-Clause https://github.com/theskumar/python-dotenv/blob/main/LICENSE
+	17.	SQLAlchemy==2.0.39 — MIT License https://github.com/sqlalchemy/sqlalchemy/blob/main/LICENSE
+	18.	typing_extensions==4.12.2 — Python Software Foundation License https://github.com/python/typing_extensions/blob/main/LICENSE
+	19.	tzlocal==5.3.1 — MIT License https://github.com/regebro/tzlocal/blob/master/LICENSE.txt
+	20.	urllib3==2.3.0 — MIT License https://github.com/urllib3/urllib3/blob/main/LICENSE.txt
+	21.	Werkzeug==3.1.3 — BSD-3-Clause https://github.com/pallets/werkzeug/blob/main/LICENSE.rs
 
 # References
 
