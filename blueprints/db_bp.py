@@ -4,6 +4,7 @@ from datetime import datetime, UTC
 from models.user import User
 from models.cryptocurrency import Cryptocurrency
 from models.fiatcurrency import FiatCurrency
+from models.wallet import Wallet
 
 
 db_bp = Blueprint('db', __name__)
@@ -96,6 +97,41 @@ def seed_tables():
     ]
     
     db.session.add_all(fiatcurrencies)
+    
+    wallets = [
+        Wallet(
+            user_id=1,
+            crypto_id=1,
+            amount=0.10000000
+        ),
+        Wallet(
+            user_id=1,
+            crypto_id=2,
+            amount=0.20000000
+        ),
+        Wallet(
+            user_id=2,
+            crypto_id=2,
+            amount=0.30000000
+        ),
+        Wallet(
+            user_id=2,
+            crypto_id=3,
+            amount=0.40000000
+        ),
+        Wallet(
+            user_id=3,
+            crypto_id=3,
+            amount=0.50000000
+        ),
+        Wallet(
+            user_id=3,
+            crypto_id=1,
+            amount=0.60000000
+        )
+    ]
  
+    db.session.add_all(wallets)
+    
     db.session.commit()
     print('Tables seeded.')
