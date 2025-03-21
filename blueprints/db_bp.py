@@ -1,10 +1,12 @@
 from flask import Blueprint
-from init import db
 from datetime import datetime, UTC
+
+from init import db
 from models.user import User
 from models.cryptocurrency import Cryptocurrency
 from models.fiatcurrency import FiatCurrency
 from models.wallet import Wallet
+from models.cryptoprice import CryptoPrice
 
 
 db_bp = Blueprint('db', __name__)
@@ -97,6 +99,7 @@ def seed_tables():
     ]
     
     db.session.add_all(fiatcurrencies)
+    db.session.commit()
     
     wallets = [
         Wallet(
@@ -132,6 +135,17 @@ def seed_tables():
     ]
  
     db.session.add_all(wallets)
+    
+    cryptoprices = [
+        CryptoPrice(
+            amount=84610,
+            price_updated="2025-03-21T15:25:56.000000",
+            crypto_id=1,
+            fiat_id=1
+        )
+    ]
+ 
+    db.session.add_all(cryptoprices)
     
     db.session.commit()
     print('Tables seeded.')

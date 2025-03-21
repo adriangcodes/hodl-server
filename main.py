@@ -9,6 +9,8 @@ from blueprints.users_bp import users_bp
 from blueprints.cryptocurrencies_bp import cryptocurrencies_bp
 from blueprints.fiatcurrencies_bp import fiatcurrencies_bp
 from blueprints.wallets_bp import wallets_bp
+from blueprints.cryptoprice_bp import cryptoprices_bp
+
 
 def create_app():
     app = Flask(__name__)
@@ -30,5 +32,6 @@ def create_app():
     app.register_blueprint(cryptocurrencies_bp)
     app.register_blueprint(fiatcurrencies_bp)
     app.register_blueprint(wallets_bp)
+    app.register_blueprint(cryptoprices_bp)
     
     return app
