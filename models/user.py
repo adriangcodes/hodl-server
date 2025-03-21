@@ -1,8 +1,9 @@
-from init import db, ma
 from marshmallow_sqlalchemy import fields
 from datetime import datetime, UTC
 from marshmallow import fields
 from marshmallow.validate import Email, Regexp
+
+from init import db, ma
 
 
 class User(db.Model):
@@ -16,7 +17,7 @@ class User(db.Model):
     
     created_at = db.Column(db.DateTime, default=datetime.now(UTC))
     is_active = db.Column(db.Boolean, default=True)
-    
+
 
 class UserSchema(ma.Schema):
     username = fields.String(required=True, validate=Regexp(r'^[a-zA-Z0-9]+$', error="Username must contain only letters and numbers."))

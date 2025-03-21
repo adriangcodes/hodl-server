@@ -1,7 +1,8 @@
-from init import db, ma
 from marshmallow_sqlalchemy import fields
 from marshmallow import fields
 from marshmallow.validate import Regexp
+
+from init import db, ma
 
 
 class Cryptocurrency(db.Model):

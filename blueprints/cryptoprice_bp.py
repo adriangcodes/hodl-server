@@ -4,7 +4,6 @@ from datetime import datetime, UTC
 import psycopg2
 
 from init import db
-from main import create_app
 from models.cryptoprice import CryptoPrice, many_cryptoprices, one_cryptoprice, CryptoPriceSchema, cryptoprice_without_id
 
 

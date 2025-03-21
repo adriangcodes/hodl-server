@@ -3,7 +3,7 @@ from sqlalchemy.exc import IntegrityError
 import psycopg2
 
 from init import db
-from models.fiatcurrency import FiatCurrency, many_fiatcurrencies, one_fiatcurrency, FiatCurrenciesSchema, fiatcurrency_without_id
+from models.fiatcurrency import FiatCurrency, many_fiatcurrencies, one_fiatcurrency, FiatCurrencySchema, fiatcurrency_without_id
 
 
 fiatcurrencies_bp = Blueprint('fiatcurrencies', __name__)
