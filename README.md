@@ -20,6 +20,10 @@ GitHub repo for past assessments:
 - hodl-app: https://github.com/adriangcodes/hodl-app
 - hodl-data: https://github.com/adriangcodes/hodl-data
 
+# Hosting
+
+App hosted using Render via custom domain (adriang.dev). Database hosted using Neon.
+
 # Requirements
 
 Please refer to requirements.txt for installed packages require to run this app.
