@@ -62,6 +62,7 @@ All third-party packages used are open source, and their use in this app can be 
 	19.	tzlocal==5.3.1 — MIT License https://github.com/regebro/tzlocal/blob/master/LICENSE.txt
 	20.	urllib3==2.3.0 — MIT License https://github.com/urllib3/urllib3/blob/main/LICENSE.txt
 	21.	Werkzeug==3.1.3 — BSD-3-Clause https://github.com/pallets/werkzeug/blob/main/LICENSE.rs
+    22.	gunicorn==21.2.0 — MIT License https://github.com/benoitc/gunicorn/blob/master/LICENSE
 
 # References
 
