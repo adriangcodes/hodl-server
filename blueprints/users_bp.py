@@ -34,14 +34,14 @@ def create_user():
         # Rollback on error
         db.session.rollback()  
         if isinstance(err.orig, psycopg2.errors.UniqueViolation):
-            return {"Error": "A user with this username or email already exists."}, 400
+            return {"error": "A user with this username or email already exists."}, 400
         elif isinstance(err.orig, psycopg2.errors.NotNullViolation):
-            return {"Error": "A required field is missing."}, 400
+            return {"error": "A required field is missing."}, 400
         else:
-            return {"Error": f"Database constraint violated: {str(err.orig)}"}, 400
+            return {"error": f"Database constraint violated: {str(err.orig)}"}, 400
     
     except Exception as err:
-        return {"Error": str(err)}, 400
+        return {"error": str(err)}, 400
 
 
 # Read - One
@@ -52,7 +52,7 @@ def get_one_user(user_id):
     if user:
         return one_user.dump(user)
     else:
-        return {"Error": f"User with id {user_id} not found."}, 404
+        return {"error": f"User with id {user_id} not found."}, 404
 
 
 # Read - All
@@ -72,7 +72,7 @@ def update_user(user_id):
         user = db.session.scalar(stmt)
         if user:
             # Get incoming request body (JSON)
-            data = user_without_id.load(request.json)
+            data = user_without_id.load(request.json, partial=True)
             # Update the attributes of the user with the incoming data - OR option covers both PUT and PATCH methods
             user.username = data.get('username') or user.username
             user.email = data.get('email') or user.email
@@ -83,10 +83,10 @@ def update_user(user_id):
             db.session.commit()
             return one_user.dump(user), 200
         else:
-            return {"Error": f"User with id {user_id} not found."}, 404
+            return {"error": f"User with id {user_id} not found."}, 404
     
     except Exception as err:
-        return {"Error": str(err)}, 400
+        return {"error": str(err)}, 400
 
 
 # Delete
@@ -99,4 +99,4 @@ def delete_user(user_id):
         db.session.commit()
         return {}, 204
     else:
-        return {"Error": f"User with id {user_id} not found."}, 404
+        return {"error": f"User with id {user_id} not found."}, 404

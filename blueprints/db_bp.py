@@ -2,6 +2,7 @@ from flask import Blueprint
 from init import db
 from datetime import datetime, UTC
 from models.user import User
+from models.cryptocurrency import Cryptocurrency
 
 
 db_bp = Blueprint('db', __name__)
@@ -49,6 +50,26 @@ def seed_tables():
     ]
     
     db.session.add_all(users)
+    
+    cryptocurrencies = [
+        Cryptocurrency(
+            id=1,
+            name='Bitcoin',
+            symbol='BTC'
+        ),
+        Cryptocurrency(
+            id=2,
+            name='Ethereum',
+            symbol='ETH'
+        ),
+        Cryptocurrency(
+            id=3,
+            name='Solana',
+            symbol='SOL'
+        )
+    ]
+    
+    db.session.add_all(cryptocurrencies)
  
     db.session.commit()
     print('Tables seeded.')
