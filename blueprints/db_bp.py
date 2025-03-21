@@ -3,6 +3,7 @@ from init import db
 from datetime import datetime, UTC
 from models.user import User
 from models.cryptocurrency import Cryptocurrency
+from models.fiatcurrency import FiatCurrency
 
 
 db_bp = Blueprint('db', __name__)
@@ -70,6 +71,31 @@ def seed_tables():
     ]
     
     db.session.add_all(cryptocurrencies)
+ 
+    fiatcurrencies = [
+        FiatCurrency(
+            id=1,
+            name='US Dollar',
+            symbol='USD'
+        ),
+        FiatCurrency(
+            id=2,
+            name='Australian Dollar',
+            symbol='AUD'
+        ),
+        FiatCurrency(
+            id=3,
+            name='Chinese Yuan',
+            symbol='CNY'
+        ),
+        FiatCurrency(
+            id=4,
+            name='Euro',
+            symbol='EUR'
+        )
+    ]
+    
+    db.session.add_all(fiatcurrencies)
  
     db.session.commit()
     print('Tables seeded.')

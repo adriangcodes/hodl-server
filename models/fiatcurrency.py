@@ -4,8 +4,8 @@ from marshmallow import fields
 from marshmallow.validate import Regexp
 
 
-class Cryptocurrency(db.Model):
-    __tablename__ = 'cryptocurrencies'
+class FiatCurrency(db.Model):
+    __tablename__ = 'fiatcurrencies'
     
     id = db.Column(db.Integer, primary_key=True)
     
@@ -13,7 +13,7 @@ class Cryptocurrency(db.Model):
     symbol = db.Column(db.String(10), nullable=False)
     
 
-class CryptocurrencySchema(ma.Schema):
+class FiatCurrenciesSchema(ma.Schema):
     name = fields.String(required=True, validate=Regexp(r'^[a-zA-Z ]+$', error="Name must contain letters and spaces only."))
     symbol = fields.String(required=True, validate=Regexp(r'^[A-Z]+$', error="Symbol must contain upper case letters only."))
 
@@ -21,6 +21,6 @@ class CryptocurrencySchema(ma.Schema):
         fields = ('id', 'name', 'symbol')
         
 
-one_cryptocurrency = CryptocurrencySchema()
-many_cryptocurrencies = CryptocurrencySchema(many=True)
-cryptocurrency_without_id = CryptocurrencySchema(exclude=['id'])
+one_fiatcurrency = FiatCurrenciesSchema()
+many_fiatcurrencies = FiatCurrenciesSchema(many=True)
+fiatcurrency_without_id = FiatCurrenciesSchema(exclude=['id'])
