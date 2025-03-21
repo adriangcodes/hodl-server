@@ -11,3 +11,5 @@ https://kb.objectrocket.com/postgresql/python-error-handling-with-the-psycopg2-p
 https://marshmallow.readthedocs.io/en/stable/marshmallow.validate.html
 https://medium.com/@jesscsommer/how-to-serialize-and-validate-your-data-with-marshmallow-a815b2276a 
 https://docs.python.org/3/library/re.html
+https://docs.sqlalchemy.org/en/20/core/type_basics.html
+https://stackoverflow.com/questions/39420754/flask-sqlalchemy-numeric-type 
