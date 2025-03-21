@@ -7,7 +7,7 @@ from init import db, ma
 from blueprints.db_bp import db_bp
 from blueprints.users_bp import users_bp
 from blueprints.cryptocurrencies_bp import cryptocurrencies_bp
-
+from blueprints.fiatcurrencies_bp import fiatcurrencies_bp
 
 def create_app():
     app = Flask(__name__)
@@ -27,5 +27,6 @@ def create_app():
     app.register_blueprint(db_bp)
     app.register_blueprint(users_bp)
     app.register_blueprint(cryptocurrencies_bp)
+    app.register_blueprint(fiatcurrencies_bp)
     
     return app

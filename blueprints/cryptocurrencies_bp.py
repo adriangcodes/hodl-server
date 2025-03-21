@@ -1,6 +1,5 @@
 from flask import Blueprint, request
 from sqlalchemy.exc import IntegrityError
-from datetime import datetime, UTC
 import psycopg2
 
 from init import db
