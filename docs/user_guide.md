@@ -2,8 +2,8 @@
 
 This guide outlines how to use the hodl-server API to interact with the cryptocurrency wallet and tracking system. The API supports standard CRUD (Create, Read, Update, Delete) operations across users, wallets, cryptocurrencies, fiat currencies, and price data.
 
-All endpoints are relative to the root URL of the deployed API: adriang.dev
-For example, interacting with Users can be done via adriang.dev/users 
+All endpoints are relative to the root URL of the deployed API: https://hodl-server.onrender.com
+For example, interacting with Users can be done via https://hodl-server.onrender.com/users 
 
 All requests and responses are in JSON format.
 
