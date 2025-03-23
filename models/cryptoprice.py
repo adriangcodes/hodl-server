@@ -1,6 +1,7 @@
 from marshmallow_sqlalchemy import fields
 from datetime import datetime, UTC
 from marshmallow import fields
+from marshmallow.validate import Range
 
 from init import db, ma
 
@@ -21,7 +22,8 @@ class CryptoPrice(db.Model):
 
 
 class CryptoPriceSchema(ma.Schema):
-    last_updated = fields.DateTime(error="Value must be a DateTime format.")
+    amount = fields.Decimal(as_string=True, places=2, validate=Range(min=0), error_messages={'invalid': 'Amount must be a number with up to 2 decimal places.', 'invalid_range': 'Amount must be a positive number.'})
+    price_updated = fields.DateTime(error="Value must be a DateTime format.")
     
     fiatcurrency = fields.Nested('FiatCurrencySchema', exclude=['id'])
     cryptocurrency = fields.Nested('CryptocurrencySchema', exclude=['id'])
