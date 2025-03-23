@@ -22,7 +22,7 @@ GitHub repo for past assessments:
 
 # Hosting
 
-App hosted using Render via custom domain (adriang.dev). Database hosted using Neon.
+App hosted using Render via custom domain. Database hosted using Neon. Please refer to docs/user_guide.md for access details.
 
 # Requirements
 
@@ -30,11 +30,11 @@ Please refer to requirements.txt for installed packages require to run this app.
 
 # User Guide
 
-Please refer to docs/user_guide.md
+Please refer to docs/user_guide.md for further details on access details and CRUD routes.
 
 # ERD
 
-Please refer to docs/erd.pdf
+Please refer to docs/erd.pdf for this project's ERD, as well as a justification for the database system selection.
 
 # Feedback
 
